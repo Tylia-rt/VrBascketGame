@@ -364,7 +364,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1649145265}
   m_Father: {fileID: 2052090840}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1886,8 +1887,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1428961324}
-  - component: {fileID: 1428961326}
   - component: {fileID: 1428961325}
+  - component: {fileID: 1428961326}
   m_Layer: 0
   m_Name: goal
   m_TagString: Untagged
@@ -1935,12 +1936,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4046409b1a5f0f4fae90054fbdda722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal:
+  Ongoal:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1649145264}
         m_TargetAssemblyTypeName: player, Assembly-CSharp
         m_MethodName: scoreChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1495081834}
+        m_TargetAssemblyTypeName: bascketNet, Assembly-CSharp
+        m_MethodName: GenerateNewLocation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2011,11 +2024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b0f440b398a0f644a77c0ff029c9cf1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.537
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b0f440b398a0f644a77c0ff029c9cf1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.799
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9b0f440b398a0f644a77c0ff029c9cf1, type: 3}
       propertyPath: m_Name
@@ -2042,6 +2055,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 9b0f440b398a0f644a77c0ff029c9cf1, type: 3}
+--- !u!114 &1495081834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159327078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01f4c042cac05044ace2a3405386149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 701540798}
 --- !u!1 &1649145263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,13 +2105,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649145263}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.1176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 701540799}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2052090839
 GameObject:

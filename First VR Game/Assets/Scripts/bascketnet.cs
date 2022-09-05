@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class bascketnet : MonoBehaviour
+public class bascketNet : MonoBehaviour
 {
-    public UnityEvent goal;
-    void OnTriggerEnter(Collider other)
+    public GameObject player;
+
+    // Update is called once per frame
+    void Update()
     {
-        goal.Invoke();
+        transform.LookAt(player.transform);
     }
+
+    public void GenerateNewLocation()
+    {
+        transform.position = new Vector3(Random.Range(-4,4), Random.Range(0.1f,3), Random.Range(-4,4));
+    }
+    
 }
